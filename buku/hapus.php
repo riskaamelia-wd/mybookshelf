@@ -1,0 +1,10 @@
+<?php 
+require_once('../koneksi/config.php');
+
+
+$id = $_GET['id'];
+$sqldelete = "DELETE FROM  buku where id ='$id' ";
+mysqli_query($conn, $sqldelete);
+
+header ("location: data.php");
+?>
